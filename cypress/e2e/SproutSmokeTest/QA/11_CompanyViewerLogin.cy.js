@@ -20,7 +20,7 @@ describe('SproutSmokeTest',()=>{
         cy.contains('Data room').click()
         cy.wait(5000)
         cy.contains('Share Class Documents').should('be.exist')
-        cy.contains('Bylaws').should('be.visible')
+        cy.contains('bylaws').should('be.visible')
         cy.contains('Board').should('be.visible').click()
         cy.get('.data-room-bread-crumb-operation')
           .eq('0')

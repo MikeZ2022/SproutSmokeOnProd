@@ -2,7 +2,10 @@
 "version":"1.0.0",
 "description":"E2E Automation Testing Cypress",
 "main":"index.js",
-"scripts":{"test":"test","cypress:open":"cypress open","cypressQA:run":"cypress run --headless --browser chrome --spec 'cypress/e2e/SproutSmokeTest/QA/*.cy.js' --record --key 83b2ecc2-aed9-4311-aa52-625caaf76074"},
+"scripts":
+{"test":"test",
+"cypress:open":"cypress open",
+"cypressQA:run":"cypress run --headless --browser chrome --spec 'cypress/e2e/SproutSmokeTest/QA/*.cy.js' --record --key 83b2ecc2-aed9-4311-aa52-625caaf76074"},
 "keywords":["e2e","cypress","automation","framework"],
 "author":"MikeZhuang",
 "license":"ISC",
