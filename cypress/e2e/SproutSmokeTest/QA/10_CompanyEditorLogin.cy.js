@@ -33,7 +33,7 @@ describe('SproutSmokeTest',()=>{
         cy.contains('Delete').click()
         cy.contains('Yes').click()
         cy.contains('Cypress').should('not.exist')
-        cy.contains('Upload files').should('be.visible')
+        cy.contains('Upload').should('be.visible')
         cy.contains('View access logs').should('be.visible')
         cy.wait(2000)
         cy.contains('document(s)').should('be.visible')
