@@ -10,6 +10,7 @@ describe('SproutSmokeTest_QA',()=>{
         // we include it in our beforeEach function so that it runs before each test
         cy.viewport('macbook-13')
         cy.loginOnQA('mike.z@getsprout.co','Mike_1983')
+        cy.wait(10000)
       })
     
       it('1.5 Cap Table Menu items Check',()=>{

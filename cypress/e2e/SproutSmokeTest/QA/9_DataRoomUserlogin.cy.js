@@ -8,6 +8,7 @@ describe('SproutSmokeTest_QA',()=>{
         // we include it in our beforeEach function so that it runs before each test
         cy.viewport('macbook-15')
         cy.loginOnQA('mikez.test001@gmail.com','Mike_1983')
+        cy.wait(10000)
       })
     it('1.9 Data Room user login and permissions check',()=>{   
         cy.url().should('contain','home/datarooms')
