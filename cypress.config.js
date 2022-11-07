@@ -4,6 +4,7 @@ module.exports = defineConfig({
   projectId: "dcws3b",
 
   e2e: {
+    baseUrl:'https://app-qa.getsprout.co/',
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
