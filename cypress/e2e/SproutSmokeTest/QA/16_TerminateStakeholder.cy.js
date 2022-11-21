@@ -34,7 +34,6 @@ describe('SproutSmokeTest_QA',()=>{
     cy.get('[data-row-key="4733"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.contains('Reverse termination').click()
     cy.get('.ant-modal-body > .modal-content > .modal-footer > :nth-child(2)').click()
-    cy.contains('Exercisable').should('not.exist')
     cy.visit('/home/summary')
     cy.wait(12000)
     cy.get('.glyphicon-user').click()
