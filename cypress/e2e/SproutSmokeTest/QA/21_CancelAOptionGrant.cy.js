@@ -7,6 +7,7 @@ describe('SproutSmokeTest_QA',()=>{
       // Since we want to visit the same URL at the start of all our tests,
       // we include it in our beforeEach function so that it runs before each test
       cy.viewport('macbook-16')
+      cy.loginWithLocalstorage()
       cy.loginOnQA('mike.z@getsprout.co','Mike_1983')
       cy.wait(10000)
     })
@@ -30,6 +31,7 @@ describe('SproutSmokeTest_QA',()=>{
     cy.contains('Reverse cancellation').click()
     cy.wait(1000)
     cy.visit('/home/summary')
+    cy.wait(10000)
     cy.get('.glyphicon-user').click()
     cy.contains('Log out').click() 
     cy.clearCookies()

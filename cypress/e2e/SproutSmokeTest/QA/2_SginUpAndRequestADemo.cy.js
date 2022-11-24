@@ -7,7 +7,8 @@ describe('SproutSmokeTest_QA',()=>{
         // Since we want to visit the same URL at the start of all our tests,
         // we include it in our beforeEach function so that it runs before each test
         cy.viewport('macbook-13')
-        cy.visit('https://app-qa.getsprout.co/')
+        cy.loginWithLocalstorage()
+        cy.visit('https://qa.getsprout.co/')
       })
     
     it('1.2 Try to Sign Up and request a demo',()=>{

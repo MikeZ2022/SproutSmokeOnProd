@@ -7,6 +7,7 @@
       // Since we want to visit the same URL at the start of all our tests,
       // we include it in our beforeEach function so that it runs before each test
       cy.viewport('macbook-15')
+      cy.loginWithLocalstorage()
       cy.loginOnQA('mike.z@getsprout.co','Mike_1983')
       cy.wait(10000)
     })
@@ -27,6 +28,7 @@
   cy.get('.body-one > .form-horizontal > :nth-child(5) > :nth-child(2) > .checkbox > .send-div').click()
   cy.get('#repurchase-step1 > .modal-footer > .btn').click()
   cy.get('#repurchase-step2 > .modal-footer > .btn').click()
+  cy.wait(10000)
   cy.contains('Repurchased').should('be.exist')
   cy.get('[data-row-key="4739"] > .ant-table-selection-column > .ant-checkbox-wrapper > .ant-checkbox').click()
   cy.contains('Actions').click()

@@ -7,6 +7,7 @@
       // Since we want to visit the same URL at the start of all our tests,
       // we include it in our beforeEach function so that it runs before each test
       cy.viewport('macbook-13')
+      cy.loginWithLocalstorage()
       cy.loginOnQA('mike.z@getsprout.co','Mike_1983')
       cy.wait(10000)
     })
@@ -32,6 +33,7 @@
   cy.get('.certificate-side-bar-menu > :nth-child(8)').click()
   cy.contains('TestFromMike').should('be.exist')
   cy.visit('/home/summary')
+  cy.wait(10000)
   cy.get('.glyphicon-user').click()
   cy.contains('Log out').click() 
   cy.clearCookies()

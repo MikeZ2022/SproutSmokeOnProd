@@ -19,12 +19,16 @@ Cypress.Commands.add('login', (username, password) => {
         cy.get('.sprout-auth-form').find('[type="password"]').type(password)
         cy.get('.sprout-auth-bth').click()
     });
-    Cypress.Commands.add('loginOnQA', (username, password) => {  
-        cy.visit('https://app-qa.getsprout.co/')
+Cypress.Commands.add('loginOnQA', (username, password) => {  
+        cy.visit('https://app-qa.getsprout.co/auth/login')
         cy.get('.sprout-auth-form').find('[type="text"]').type(username)
         cy.get('.sprout-auth-form').find('[type="password"]').type(password)
         cy.get('.sprout-auth-bth').click()
-    });    
+    });   
+Cypress.Commands.add('loginWithLocalstorage', () => { 
+    var timestamp = (new Date()).valueOf();
+    window.localStorage.setItem('GOOGLE_CHECK_EXPIRED', timestamp+43200000)
+      }) 
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
