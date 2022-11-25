@@ -25,8 +25,6 @@
     cy.get('#modifyValue > .modal-footer > .btn').click()
     cy.get('#reviewModifications > .modal-footer > .btn').click()
     cy.wait(15000)
-    cy.get('#reviewModifications > .modal-header > .close').click()
-    cy.wait(10000)
     cy.contains('1').should('be.exist')
     cy.visit('home/captable/byshareclass')
     cy.wait(12000)
