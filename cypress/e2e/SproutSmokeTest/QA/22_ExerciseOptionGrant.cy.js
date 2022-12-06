@@ -14,7 +14,7 @@ describe('SproutSmokeTest_QA',()=>{
 
     it('1.22 Exercise a option grant',()=>{
     cy.contains('Securities').click()
-    cy.contains('Share Option Awards').click()
+    cy.contains('Share option awards').click()
     cy.get('[data-row-key="4896"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.get('.ant-dropdown-menu > :nth-child(2) > a').click()
     cy.get('#exercise_step1 > .modal-body > .body-one > .form-horizontal > :nth-child(1) > .col-xs-5 > .ant-picker > .ant-picker-input > input').click()

@@ -14,7 +14,7 @@ describe('SproutSmokeTest_QA',()=>{
 
     it('1.16 Terminate a stakeholder',()=>{
     cy.contains('Securities').click()
-    cy.contains('Share Option Awards').click()
+    cy.contains('Share option awards').click()
     cy.get('[data-row-key="4733"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.get(':nth-child(9) > a').click()
     cy.get(':nth-child(1) > div.col-xs-4 > .ant-picker > .ant-picker-input > input').click()
@@ -26,7 +26,7 @@ describe('SproutSmokeTest_QA',()=>{
     cy.get('#notifications > .nav > .modal-footer > .btn').click()
     cy.get('#confirm_checkbox > .send-div').click()
     cy.get('.ter-reviewContent > :nth-child(2) > .ant-table-wrapper > .ant-spin-nested-loading > .ant-spin-container > .ant-table > .ant-table-container > .ant-table-content > table > .ant-table-tbody > .ant-table-row > .ant-table-selection-column > .ant-checkbox-wrapper > .ant-checkbox').click()
-    cy.get('.ant-table-cell-fix-right > .ant-picker > .ant-picker-input > input').click()
+    cy.get('.ant-table-cell-fix-right > .ant-picker').click()
     cy.wait(1000)
     cy.contains('No expiration date').click()
     cy.get('.nav > .preStock-footer > .btn').click()

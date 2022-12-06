@@ -19,7 +19,7 @@
         cy.contains('Manage share classes').should('be.exist')
         cy.contains('Manage vesting').should('be.exist')
         cy.contains('Draft shares').should('be.exist')
-        cy.contains('Share Option Awards').click()
+        cy.contains('Share option awards').click()
         cy.contains('Manage equity plans').should('be.exist')
         cy.contains('Warrants').click()
         cy.contains('Manage warrant blocks').should('be.exist')
