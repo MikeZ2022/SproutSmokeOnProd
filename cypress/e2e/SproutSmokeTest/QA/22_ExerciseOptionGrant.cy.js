@@ -14,7 +14,7 @@ describe('SproutSmokeTest_QA',()=>{
 
     it('1.22 Exercise a option grant',()=>{
     cy.contains('Securities').click()
-    cy.contains('Share option awards').click()
+    cy.contains('Share Option Awards').click()
     cy.get('[data-row-key="4896"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.get('.ant-dropdown-menu > :nth-child(3) > a').click()
     cy.get('#exercise_step1 > .modal-body > .body-one > .form-horizontal > :nth-child(1) > .col-xs-5 > .ant-picker').click()
@@ -32,7 +32,7 @@ describe('SproutSmokeTest_QA',()=>{
     cy.reload()
     cy.wait(10000)
     cy.get('.sprout-task-tip-btns > .ant-btn').click()
-    cy.get('.sprout-header-task').click()
+    cy.get('.sprout-header-task-wrap > :nth-child(2)').click()
     cy.contains('Sign certificate').click()
     cy.get('.ant-table-selection-column > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').click()
     cy.get('.task-sign-btns > .ant-btn').click()
