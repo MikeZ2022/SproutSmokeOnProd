@@ -21,7 +21,7 @@ describe('SproutSmokeTest_QA',()=>{
         cy.contains('Cash raised').eq('0').click()
         cy.contains('Security').should('be.exist')
         cy.contains('Scenario modeling').should('be.exist')
-        cy.contains('Wire Instructions').should('be.exist')
+        cy.contains('Wire instructions').should('be.exist')
         cy.wait(2000)
         cy.get('.glyphicon-user').click()
         cy.contains('Log out').click() 

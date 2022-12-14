@@ -14,7 +14,7 @@ describe('SproutSmokeTest_QA',()=>{
 
     it('1.16 Terminate a stakeholder',()=>{
     cy.contains('Securities').click()
-    cy.contains('Share Option Awards').click()
+    cy.contains('Share option awards').click()
     cy.get('[data-row-key="4733"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.get(':nth-child(9) > a').click()
     cy.get(':nth-child(1) > div.col-xs-4 > .ant-picker > .ant-picker-input > input').click()
