@@ -12,7 +12,7 @@ describe('SproutSmokeTest',()=>{
         cy.wait(10000)
       })
     it('1.13 Share Class Admin login and permissions check',()=>{   
-        cy.contains('Summary').should('be.visible')  
+        cy.contains('Company').should('be.visible')  
         cy.contains('Permissions and roles').should('not.exist')
         cy.contains('Account users').should('not.exist')
         cy.contains('Cap Table').should('be.visible')
