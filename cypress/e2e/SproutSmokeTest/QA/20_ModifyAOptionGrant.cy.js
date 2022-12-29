@@ -26,7 +26,7 @@ describe('SproutSmokeTest_QA',()=>{
     cy.get('#reviewOptionModifications > .modal-footer > .btn').click()
     cy.wait(1000)
     cy.contains('1').should('be.exist')
-    cy.contains('Cap Table').click()
+    cy.contains('Cap table').click()
     cy.contains('By share class').click()
     cy.contains('Test Incentive Plan').click()
     cy.contains('mzhuang').click()

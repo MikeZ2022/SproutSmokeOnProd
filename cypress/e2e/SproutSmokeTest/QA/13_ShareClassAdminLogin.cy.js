@@ -15,7 +15,7 @@ describe('SproutSmokeTest',()=>{
         cy.contains('Company').should('be.visible')  
         cy.contains('Permissions and roles').should('not.exist')
         cy.contains('Account users').should('not.exist')
-        cy.contains('Cap Table').should('be.visible')
+        cy.contains('Cap table').should('be.visible')
         cy.contains('Securities').should('be.visible')
         cy.contains('Data room').click()
         cy.contains('Please get in touch with the company admin to grant access.')

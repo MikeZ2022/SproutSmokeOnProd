@@ -15,7 +15,7 @@ describe('SproutSmokeTest_QA',()=>{
       })
     
       it('1.5 Cap Table Menu items Check',()=>{
-        cy.contains('Cap Table').click()
+        cy.contains('Cap table').click()
         cy.contains('By share class').click()
         cy.contains('View cap table as of').should('be.exist')
         cy.get('.ant-collapse-header').eq('0').click()
