@@ -22,7 +22,7 @@ describe('SproutSmokeTest_QA',()=>{
     cy.get('#cancel_step1 > .modal-body > .body-one > .form-horizontal > :nth-child(2) > div.col-xs-5 > .form-control').select('Clerical error')
     cy.get(':nth-child(4) > .row > .col-xs-6 > .form-control').type('Test From Mike')
     cy.get('#cancel_step1 > .modal-footer > .btn').click()
-    cy.contains('Cancel certificate').click()
+    cy.get('#cancel_step2 > .modal-footer > .btn').click()
     cy.contains('Canceled').should('be.exist')
     cy.get('[data-row-key="4728"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.contains('Reverse cancellation').click()
