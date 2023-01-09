@@ -18,6 +18,8 @@ describe('SproutSmokeTest',()=>{
         cy.contains('Cap table').should('be.visible')
         cy.contains('Securities').should('be.visible')
         cy.contains('Data room').click()
+        cy.contains('Access logs').click()
+        cy.get('.anticon-close').click()
         cy.contains('Please get in touch with the company admin to grant access.')
         cy.get('.glyphicon-user').click()
         cy.contains('Log out').click() 

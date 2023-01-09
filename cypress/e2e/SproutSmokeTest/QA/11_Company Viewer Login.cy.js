@@ -21,6 +21,8 @@ describe('SproutSmokeTest',()=>{
         cy.wait(2000)
         cy.contains('Data room').click()
         cy.wait(5000)
+        cy.contains('Access logs').click()
+        cy.get('.anticon-close').click()
         cy.contains('Share Class Documents').should('be.exist')
         cy.contains('bylaws').should('be.visible')
         cy.contains('Board').should('be.visible').click()
