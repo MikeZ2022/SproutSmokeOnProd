@@ -13,7 +13,7 @@ describe('SproutSmokeTest',()=>{
       })
 
     it('1.23 Filter function in Stakeholders',()=>{
-    cy.contains('Stakeholders').click()
+    cy.contains('Stakeholders').trigger('mouseover')
     cy.contains('All stakeholders').click()
     cy.get('.ant-badge > .ant-btn').click()
     cy.get(':nth-child(1) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')

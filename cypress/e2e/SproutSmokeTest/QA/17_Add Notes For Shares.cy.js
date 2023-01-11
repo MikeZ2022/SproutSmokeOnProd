@@ -13,7 +13,10 @@
     })
 
   it('1.17 Add Notes for Shares',()=>{
-  cy.contains('Securities').click()
+  cy.contains('Securities').trigger('mouseover')
+  cy.contains('Securities settings').click()
+  cy.wait(1000)
+  cy.contains('Securities').trigger('mouseover')
   cy.contains('Shares').click()
   cy.get('[data-row-key="4736"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
   cy.get('.ant-dropdown-menu > :nth-child(8) > a').click()

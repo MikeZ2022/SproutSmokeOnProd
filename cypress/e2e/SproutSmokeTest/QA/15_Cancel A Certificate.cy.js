@@ -13,7 +13,10 @@ describe('SproutSmokeTest_QA',()=>{
     })
 
     it('1.15 Cancel a Certificate',()=>{
-    cy.contains('Securities').click()
+    cy.contains('Securities').trigger('mouseover')
+    cy.contains('Securities settings').click()
+    cy.wait(1000)
+    cy.contains('Securities').trigger('mouseover')
     cy.contains('Shares').click()
     cy.get('[data-row-key="4728"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.get('.ant-dropdown-menu > :nth-child(5) > a').click()

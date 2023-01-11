@@ -13,8 +13,12 @@ describe('SproutSmokeTest',()=>{
       })
 
     it('1.24 Filter function in Shares',()=>{
-    cy.contains('Securities').click()
+    cy.contains('Securities').trigger('mouseover')
+    cy.contains('Securities settings').click()
+    cy.wait(1000)
+    cy.contains('Securities').trigger('mouseover')
     cy.contains('Shares').click()
+    cy.get('.ant-input').type('Anna sun')
     cy.get('.ant-badge > .ant-btn').click()
     cy.get(':nth-child(1) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')
       .click()
@@ -26,7 +30,6 @@ describe('SproutSmokeTest',()=>{
       .wait(1000)
       .type('CSA{enter}')
     cy.get(':nth-child(2) > .ant-form-item-label > label').click()
-    
     cy.get(':nth-child(4) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')
       .click()
       .wait(1000)

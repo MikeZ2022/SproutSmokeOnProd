@@ -13,7 +13,7 @@ describe('SproutSmokeTest_QA',()=>{
     })
 
     it('1.22 Exercise a option grant',()=>{
-    cy.contains('Securities').click()
+    cy.contains('Securities').trigger('mouseover')
     cy.contains('Share option awards').click()
     cy.get('[data-row-key="4896"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.get('.ant-dropdown-menu > :nth-child(3) > a').click()
@@ -29,7 +29,7 @@ describe('SproutSmokeTest_QA',()=>{
       .trigger('mousedown,bottom')
     cy.get('#exercise_step2 > .modal-footer > .btn').click()
     cy.contains('Partially exercised').should('be.exist')
-    cy.reload()
+    cy.visit('https://app-qa.getsprout.co/task/sign')
     cy.wait(10000)
     cy.get('.sprout-task-tip-btns > .ant-btn').click()
     cy.get('.sprout-header-task-wrap > :nth-child(2)').click()
