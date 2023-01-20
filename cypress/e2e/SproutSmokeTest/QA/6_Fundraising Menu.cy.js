@@ -14,7 +14,7 @@ describe('SproutSmokeTest_QA',()=>{
       })
 
       it('1.6 Fundraising Menu items check',()=>{
-        cy.contains('Fundraising').trigger('mouseover')
+        cy.get(':nth-child(6) > .ant-menu-submenu-title').trigger('mouseover')
         cy.contains('Financing history').click()
         cy.contains('Funding rounds').should('be.exist')
         cy.contains('Round').should('be.exist')
@@ -23,7 +23,7 @@ describe('SproutSmokeTest_QA',()=>{
         cy.contains('Scenario modeling').should('be.exist')
         cy.contains('Wire instructions').should('be.exist')
         cy.wait(2000)
-        cy.get('.glyphicon-user').click()
+        cy.get('.sprout-header-task-wrap > .sprout-header-avatar').click()
         cy.contains('Log out').click() 
         cy.clearCookies()
         cy.getCookies().should('be.empty')

@@ -12,6 +12,7 @@ describe('SproutSmokeTest',()=>{
         cy.wait(10000)
       })
     it('1.12 ESOP admin login and permissions check',()=>{   
+        cy.get('.ant-menu-submenu-selected > .ant-menu-submenu-title').trigger('mouseover')
         cy.contains('Company').should('be.visible')  
         cy.contains('Permissions and roles').should('not.exist')
         cy.contains('Account users').should('not.exist')
@@ -22,7 +23,7 @@ describe('SproutSmokeTest',()=>{
         cy.contains('PGA-111').should('be.visible')
         cy.contains('Cap table').should('be.visible')
         cy.contains('Securities').should('be.visible')
-        cy.get('.glyphicon-user').click()
+        cy.get('.sprout-header-task-wrap > .sprout-header-avatar').click()
         cy.contains('Log out').click() 
         cy.clearCookies()
         cy.getCookies().should('be.empty')

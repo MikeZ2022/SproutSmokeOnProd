@@ -36,6 +36,5 @@ describe('SproutSmokeTest_QA',()=>{
         cy.get('#company_size').type('11')
         cy.get('.ant-btn').click()
         cy.contains('Plans and Pricing')
-   
       })
 })

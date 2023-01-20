@@ -11,7 +11,8 @@ describe('SproutSmokeTest',()=>{
         cy.loginOnQA('mikez.test003@gmail.com','Mike_1983')
         cy.wait(10000)
       })
-    it('1.11 Company Viewer login and permissions check',()=>{     
+    it('1.11 Company Viewer login and permissions check',()=>{  
+        cy.get('.ant-menu-submenu-selected > .ant-menu-submenu-title').trigger('mouseover')   
         cy.contains('Summary').should('be.visible')  
         cy.contains('Permissions and roles').should('not.exist')
         cy.contains('Account users').should('not.exist')
@@ -31,7 +32,7 @@ describe('SproutSmokeTest',()=>{
         cy.contains('MikeTest003').should('exist')
         cy.contains('Entered Board').should('exist')
         cy.get('.close').click()
-        cy.get('.glyphicon-user').click()
+        cy.get('.sprout-header-task-wrap > .sprout-header-avatar').click()
         cy.contains('Log out').click() 
         cy.clearCookies()
         cy.getCookies().should('be.empty')

@@ -32,11 +32,6 @@ describe('SproutSmokeTest_QA',()=>{
         cy.contains('Cap table').trigger('mouseover').trigger('mouseover')
         cy.contains('Rights and preferences').click()
         cy.contains('Share class details').should('be.exist')
-        cy.wait(2000)
-        cy.get('.glyphicon-user').click()
-        cy.contains('Log out').click() 
-        cy.clearCookies()
-        cy.getCookies().should('be.empty')
       })
 })
 

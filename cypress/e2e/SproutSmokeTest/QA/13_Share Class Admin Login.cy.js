@@ -12,6 +12,7 @@ describe('SproutSmokeTest',()=>{
         cy.wait(10000)
       })
     it('1.13 Share Class Admin login and permissions check',()=>{   
+        cy.get('.ant-menu-submenu-selected > .ant-menu-submenu-title').trigger('mouseover')
         cy.contains('Company').should('be.visible')  
         cy.contains('Permissions and roles').should('not.exist')
         cy.contains('Account users').should('not.exist')
@@ -21,7 +22,7 @@ describe('SproutSmokeTest',()=>{
         cy.contains('Access logs').click()
         cy.get('.anticon-close').click()
         cy.contains('Please get in touch with the company admin to grant access.')
-        cy.get('.glyphicon-user').click()
+        cy.get('.sprout-header-task-wrap > .sprout-header-avatar').click()
         cy.contains('Log out').click() 
         cy.clearCookies()
         cy.getCookies().should('be.empty')

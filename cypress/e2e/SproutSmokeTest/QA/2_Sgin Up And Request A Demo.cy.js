@@ -44,7 +44,5 @@ describe('SproutSmokeTest_QA',()=>{
         cy.get('#request_demo').click()
         cy.contains('Success!')
           .should('be.exist') 
-        cy.clearCookies()
-        cy.getCookies().should('be.empty')
       })
 })

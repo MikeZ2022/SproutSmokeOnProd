@@ -27,7 +27,5 @@ describe('SproutSmokeTest_QA',()=>{
         cy.get('.is-style-hollow').contains('Learn more').click({force: true})
         cy.contains('A Trusted Stakeholder Management Solution for Shares, ESOP and Everything in Between.').should('exist')
         cy.url().should('contains','features')
-        cy.clearCookies()
-        cy.getCookies().should('be.empty')
       })
 })
