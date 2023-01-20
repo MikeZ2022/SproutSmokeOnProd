@@ -18,7 +18,7 @@ describe('SproutSmokeTest',()=>{
         cy.contains('Settings').should('be.visible')
         cy.contains('Data room').click()
         cy.wait(5000)
-        cy.contains('Access logs').click()
+        cy.get('.data-room-bread-crumb-inner > .ant-btn').click()
         cy.get('.anticon-close').click()
         cy.contains('New folder').click()
         cy.get('.form-control').type('Cypress')

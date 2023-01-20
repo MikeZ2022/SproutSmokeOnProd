@@ -18,6 +18,7 @@
     cy.wait(1000)
     cy.contains('Securities').trigger('mouseover')
     cy.contains('Shares').click()
+    cy.wait(5000)
     cy.get('[data-row-key="4740"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.get('.ant-dropdown-menu > :nth-child(2) > a').click()
     cy.get('#schedule_step1 > .modal-body > .body-one > .form-horizontal > :nth-child(1) > .col-xs-7 > .form-control').select('sdsd')

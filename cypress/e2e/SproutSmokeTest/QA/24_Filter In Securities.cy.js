@@ -18,6 +18,7 @@ describe('SproutSmokeTest',()=>{
     cy.wait(1000)
     cy.contains('Securities').trigger('mouseover')
     cy.contains('Shares').click()
+    cy.wait(5000)
     cy.get('.ant-input').type('Anna sun')
     cy.get('.ant-badge > .ant-btn').click()
     cy.get(':nth-child(1) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector')

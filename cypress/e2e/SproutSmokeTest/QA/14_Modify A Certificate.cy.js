@@ -14,7 +14,6 @@
 
     it('1.14 Modify a Certificate',()=>{
     cy.visit('home/securities/shares')
-    cy.get('.ant-menu-submenu-selected > .ant-menu-submenu-title').click()
     cy.get('[data-row-key="4736"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
     cy.contains('Modify certificate').click()
     cy.get(':nth-child(1) > .row > .col-xs-4 > .form-control').select('Clerical error')

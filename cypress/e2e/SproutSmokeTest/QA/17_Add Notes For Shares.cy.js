@@ -18,6 +18,7 @@
   cy.wait(1000)
   cy.contains('Securities').trigger('mouseover')
   cy.contains('Shares').click()
+  cy.wait(5000)
   cy.get('[data-row-key="4736"] > .ant-table-cell-fix-right > .ant-dropdown-trigger').click()
   cy.get('.ant-dropdown-menu > :nth-child(8) > a').click()
   cy.get('.tab-content > .modal-content > .modal-body > .form-control')
