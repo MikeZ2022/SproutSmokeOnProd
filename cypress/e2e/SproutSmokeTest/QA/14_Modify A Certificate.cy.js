@@ -49,6 +49,6 @@
     cy.get(':nth-child(2) > .table > tbody > :nth-child(4) > :nth-child(3) > .form-control').type('123456')
     cy.get('#modifyValue > .modal-footer > .btn').click()
     cy.get('#reviewModifications > .modal-footer > .btn').click()
-    cy.contains('123456').should('be.exist')
+    cy.contains('123,456').should('be.exist')
 })
 })
