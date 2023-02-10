@@ -20,7 +20,7 @@
        cy.wait(2000)
        cy.contains('Stakeholders').trigger('mouseover')
        cy.contains('Transactions').click()
-       cy.wait(15000)
+       cy.wait(5000)
        cy.contains('Security').should('be.exist')
        cy.contains('Stakeholders').trigger('mouseover')
        cy.contains('Stakeholder access').click()
