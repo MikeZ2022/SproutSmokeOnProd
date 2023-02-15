@@ -40,7 +40,7 @@ describe('SproutSmokeTest',()=>{
     cy.get('.ant-space > :nth-child(2) > .ant-btn').click()
     cy.contains('3').should('be.exist')
     cy.get('.ant-badge > .ant-btn').click()
-    cy.get(':nth-child(13) > :nth-child(2)').click()
+    cy.get(':nth-child(1) > .ant-checkbox-wrapper > :nth-child(2)').click()
     cy.get('.ant-space > :nth-child(2) > .ant-btn').click()
     cy.contains('4').should('be.exist')
     cy.contains('Anna Sun').should('exist')
