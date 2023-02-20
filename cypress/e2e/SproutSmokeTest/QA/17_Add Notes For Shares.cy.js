@@ -34,7 +34,7 @@
   cy.contains('Investor A1').click()
   cy.contains('PSA-1').click()
   cy.wait(1000)
-  cy.get('.certificate-side-bar-menu > :nth-child(9)').click()
+  cy.get('.certificate-side-bar-menu > :nth-child(8)').click()
   cy.contains('TestFromMike').should('be.exist')
 })
 })
